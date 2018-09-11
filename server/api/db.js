@@ -5,7 +5,7 @@ const connection = mongoDB.connect(url, {useNewUrlParser: true}).catch((e) => {
 });
 const users = async () => {
     const completed_connection = await connection;
-    return await completed_connection.db('users');
+    return await completed_connection.db('main');
 };
 const resources = async () => {
     const completed_connection = await connection;

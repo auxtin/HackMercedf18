@@ -4,12 +4,21 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "^3.0.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0",
     "mongodb": "^3.1.1",
+    "mongoose": "^5.2.3",
+    "morgan": "^1.9.0",
+    "dotenv": "^6.0.0",
     "nodemon": "^1.17.5"
   },
+  "devDependencies": {
+    "chance": "^1.0.16"
+  },
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "mock": "echo 'DB Username:'; read db_username && export db_username; echo 'DB Password:'; read -s db_password && export db_password; node ./model/mock_data.js"
   }
 }
